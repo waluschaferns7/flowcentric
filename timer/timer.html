@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Focus Timer | FlowCentric</title>
+  <link rel="icon" type="image/png" href="../Flow_Icon.png">
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+    <span class="topbar-title">◎ FlowCentric</span>
+  </header>
+  <div class="app-container">
+    <div class="overlay" id="overlay"></div>
+    <aside class="sidebar">
+      <div class="logo">
+        <span class="logo-icon">◎</span>
+        <h1 class="logo-text">FlowCentric</h1>
+      </div>
+
+      <nav class="nav">
+        <a href="../index.html" class="nav-link">Dashboard</a>
+        <a href="timer/timer.html" class="nav-link active">Focus Timer</a>
+        <a href="../notes/notes.html" class="nav-link">Notes</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <p>Find your flow</p>
+        <small>v1.0</small>
+      </div>
+    </aside>
+
+    <main class="content">
+      <header class="main-header">
+        <div>
+          <h2 class="page-title">Focus Timer</h2>
+          <p class="page-subtitle">One session at a time.</p>
+        </div>
+      </header>
+
+      <section class="main-body">
+        <div class="focus-timer">
+          <!-- Mode tabs -->
+          <div class="timer-modes">
+            <button class="mode-btn active" data-mode="focus">Focus</button>
+            <button class="mode-btn" data-mode="short">Short Break</button>
+            <button class="mode-btn" data-mode="long">Long Break</button>
+          </div>
+
+          <!-- Timer display -->
+          <div class="timer-display" id="timer-display">25:00</div>
+           <p class="timer-status" id="timer-status">Ready to focus</p>
+
+           <!-- Session dots (4 per cycle) -->
+            <div class="session-dots" id="session-dots">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+
+            <!-- Controls -->
+            <div class="timer-controls">
+              <button class="btn-primary" id="timer-start">Start</button>
+              <button class="btn-secondary" id="timer-pause">Pause</button>
+              <button class="btn-secondary" id="timer-reset">Reset</button>
+            </div>
+
+            <!-- Settings -->
+            <div class="timer-settings">
+              <h4 class="settings-title">Set your own times (minutes)</h4>
+
+              <div class="presets">
+                <button class="preset-btn" data-minutes="15">15</button>
+                <button class="preset-btn" data-minutes="25">25</button>
+                <button class="preset-btn" data-minutes="45">45</button>
+                <button class="preset-btn" data-minutes="60">60</button>
+              </div>
+
+              <div class="settings-grid">
+                <label>
+                  Focus
+                  <input type="number" id="set-focus" min="1" max="180" value="25" />
+                </label>
+                <label>
+                  Short break
+                  <input type="number" id="set-short" min="1" max="60" value="5" />
+                </label>
+                <label>
+                  Long break
+                  <input type="number" id="set-long" min="1" max="60" value="15" />
+                </label>
+              </div>
+            </div>
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+  <script src="../nav.js"></script>
+  <script src="../storage.js"></script>
+  <script src="timer.js"></script>
+</body>
+</html>

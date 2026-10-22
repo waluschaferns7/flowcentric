@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow Centric — Find Your Flow</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="Flow_Icon.png">
+</head>
+<body>
+    <header class="topbar">
+        <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+        <span class="topbar-title">◎ FlowCentric</span>
+    </header>
+    <div class="app-container">
+        <div class="overlay" id="overlay"></div>
+        <aside class="sidebar">
+            <!-- Logo -->
+             <div class="logo">
+                <span class="logo-icon">◎</span>
+                <h1 class="logo-text">FlowCentric</h1>
+            </div>
+
+            <!-- Navigation -->
+             <nav class="nav">
+                <a href="#" class="nav-link active">Dashboard</a>
+                <a href="timer/timer.html" class="nav-link">Focus Timer</a>
+                <a href="notes/notes.html" class="nav-link">Notes</a>
+            </nav>
+
+
+            <!-- Footer -->
+             <div class="sidebar-footer">
+                <p>Find your flow</p>
+                <small>v1.0</small>
+            </div>
+        </aside>
+
+        <main class="content">
+            <!-- Header -->
+             <header class="main-header">
+                <div>
+                    <h2 class="page-title">Dashboard</h2>
+                    <p class="page-subtitle">Welcome! Let's find your flow.</p>
+                </div>
+            </header>
+
+            <!-- Content area -->
+             <section class="main-body">
+                <div class="welcome">
+                    <h3 class="greeting"></h3>
+                    <p class="current-date" id="current-date"></p>
+                </div>
+
+                <!-- Daily overview -->
+                <section class="overview">
+                    <h3 class="section-title">Daily Overview</h3>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <p class="stat-label">Productivity Score</p>
+                            <h4 class="stat-value" id="stat-score">0%</h4>
+                        </div>
+
+                        <div class="stat-card">
+                            <p class="stat-label">Focus Time</p>
+                            <h4 class="stat-value" id="stat-focus">0 min</h4>
+                        </div>
+
+                        <div class="stat-card">
+                            <p class="stat-label">Tasks Completed</p>
+                            <h4 class="stat-value" id="stat-tasks">0 / 0</h4>
+                        </div>
+
+                        <div class="stat-card">
+                            <p class="stat-label">Focus Streak</p>
+                            <h4 class="stat-value" id="stat-streak">0 days</h4>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Task manager -->
+                 <section class="task-manager">
+                    <h3 class="section-title">Task Manager</h3>
+                    <!-- Task entry form -->
+                     <form class="task-form" id="task-form">
+                        <input 
+                        type="text" 
+                        id="task-input" 
+                        class="task-input" 
+                        placeholder="What do you need to do?" 
+                        required
+                        />
+
+                        <select id="task-priority" class="task-select">
+                            <option value="low">Low</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="high">High</option>
+                        </select>
+
+                        <input type="date" id="task-date" class="task-date" />
+
+                        <button type="submit" class="btn-primary" id="task-submit">Add Task</button>
+                        <button type="button" class="btn-secondary" id="task-cancel" hidden>Cancel</button>
+                    </form>
+
+                    <div class="task-toolbar">
+                        <div class="task-filters">
+                            <button class="filter-btn active" data-filter="all">All</button>
+                            <button class="filter-btn" data-filter="active">Active</button>
+                            <button class="filter-btn" data-filter="done">Done</button>
+                        </div>
+
+                        <select id="task-sort" class="task-select">
+                            <option value="newest">Newest first</option>
+                            <option value="priority">Priority</option>
+                            <option value="due">Due date</option>
+                        </select>
+                    </div>
+
+                    <!-- Task list -->
+                     <ul class="task-list" id="task-list">
+                        <li class="empty-state">No tasks yet. Add your first one above.</li>
+                    </ul>
+                    <!-- cards, tasks, timer go here later -->
+            </section>
+        </section>
+        </main>
+    </div>
+
+    <script src="nav.js"></script>
+    <script src="storage.js"></script>
+    <script src="script.js" defer></script>
+</body>
+</html>

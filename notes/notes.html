@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notes | FlowCentric</title>
+  <link rel="icon" type="image/png" href="../Flow_Icon.png">
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+    <span class="topbar-title">◎ FlowCentric</span>
+  </header>
+  <div class="app-container">
+    <div class="overlay" id="overlay"></div>
+    <aside class="sidebar">
+      <div class="logo">
+        <span class="logo-icon">◎</span>
+        <h1 class="logo-text">FlowCentric</h1>
+      </div>
+
+      <nav class="nav">
+        <a href="../index.html" class="nav-link">Dashboard</a>
+        <a href="../timer/timer.html" class="nav-link">Focus Timer</a>
+        <a href="notes.html" class="nav-link active">Notes</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <p>Find your flow</p>
+        <small>v1.0</small>
+      </div>
+    </aside>
+
+    <main class="content">
+      <header class="main-header">
+        <div>
+          <h2 class="page-title">Notes</h2>
+          <p class="page-subtitle">Capture ideas before they disappear.</p>
+        </div>
+      </header>
+
+      <section class="main-body">
+
+        <!-- Note form -->
+        <form class="note-form" id="note-form">
+          <input
+            type="text"
+            id="note-title"
+            class="note-title-input"
+            placeholder="Title"
+            maxlength="80"
+          />
+          <textarea
+            id="note-content"
+            class="note-content-input"
+            placeholder="Write your note here..."
+            rows="5"
+          ></textarea>
+
+          <div class="note-form-actions">
+            <button type="submit" class="btn-primary" id="note-save">Save Note</button>
+            <button type="button" class="btn-secondary" id="note-cancel" hidden>Cancel</button>
+          </div>
+        </form>
+
+        <!-- Search -->
+        <div class="notes-toolbar">
+          <h3 class="section-title">Your Notes <span id="notes-count" class="notes-count">0</span></h3>
+          <input
+            type="search"
+            id="note-search"
+            class="note-search"
+            placeholder="Search notes..."
+          />
+        </div>
+
+        <!-- Notes grid -->
+        <div class="notes-grid" id="notes-grid"></div>
+
+      </section>
+    </main>
+
+  </div>
+
+  <script src="../nav.js"></script>
+  <script src="../storage.js"></script>
+  <script src="notes.js"></script>
+</body>
+</html>
