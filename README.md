@@ -55,4 +55,4 @@ The productivity score is 60% tasks completed today and 40% focus time today (a 
 
 ## Author
 
-Waluscha - [GitHub](https://github.com/waluschaferns7)
+Waluscha Fernandes - [GitHub](https://github.com/waluschaferns7)
