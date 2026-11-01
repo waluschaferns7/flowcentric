@@ -4,7 +4,7 @@
 
 **Live demo:** https://waluschaferns7.github.io/flowcentric/
 
-<img width="1917" height="916" alt="image" src="https://github.com/user-attachments/assets/57e2ea37-7f5b-417e-95fa-f6ba3ad53a05" />
+<img width="1917" height="916" alt="image" src="![alt text](image.png)" />
 
 
 ## Features
